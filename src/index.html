@@ -1,17 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+<title>Restaurante Local El Guero</title>
+<link rel="stylesheet" href="guero.css">
+
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
 
+<div>
+<h1>Restaurante Local El Guero</h1>
+<p>Bienvenido a restaurante El Guero. Dentro de este restaurante establecido en 1858, tenemos los mejores platillos locales, desde enchiladas hasta sopes. Ven a visitarnos, y compruébalo tú mismo.</p>
+<img src="https://tacoselguero.mx/wp-content/uploads/2021/01/New-Project-4.jpg" alt="El Guero" style = "display: flex; justify-content: center; margin: auto;">
+</div>
+
+<div>
+<h1>Entradas</h1>
+
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
+  </tr>
+  <tr>
+    <td>Sopes</td>
+    <td>4 piezas</td>
+    <td>$ 124</td>
+  </tr>
+  <tr>
+    <td>Tacos Dorados</td>
+    <td>5 piezas</td>
+    <td>$ 124</td>
+  </tr>
+</table>
+
+</div>
+
+<div>
+    <h1>Platos Principales</h1>
+    
+    
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+      </tr>
+      <tr>
+        <td>Enchiladas</td>
+        <td>5 piezas</td>
+        <td>$ 115</td>
+      </tr>
+      <tr>
+        <td>Flautas</td>
+        <td>5 piezas</td>
+        <td>$ 110</td>
+      </tr>
+    </table>
+    
+    </div>
+
+    <div>
+        <h1>Postres</h1>
+        
+        
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+          </tr>
+          <tr>
+            <td>Campechana</td>
+            <td>1 pieza</td>
+            <td>$ 200</td>
+          </tr>
+          <tr>
+            <td>Refresco</td>
+            <td>1 pieza</td>
+            <td>$ 30</td>
+          </tr>
+        </table>
+        
+        </div>
+    
+<div>
+    <h1>Ambiente y Platillos</h1>
+    <p>Disfruta de nuestro gran ambiente familiar e increíbles platillos</p>
+
+    <table>
+        <tr>
+            <td><img src="https://tacoselguero.mx/wp-content/uploads/2021/01/familia_tacos_el_guero.jpg" width="300"></td>
+            <td><img src="https://tacoselguero.mx/wp-content/uploads/2021/01/MG_1823-min-scaled.jpg" width="300"></td>
+            <td><img src="https://tacoselguero.mx/wp-content/uploads/2021/01/ninos_tacos_el_guero.jpg" width="300"></td>
+            <td><img src="https://tacoselguero.mx/wp-content/uploads/2021/01/MG_1832-min-scaled.jpg" width="300" height = "200"></td>
+
+
+        </tr>
+        
+        <tr>
+            <td><img src="https://tacoselguero.mx/wp-content/uploads/2021/01/grupo_tacos_el_guero.jpg" width="300"></td>
+            <td><img src="https://tacoselguero.mx/wp-content/uploads/2021/01/MG_1848-min-scaled.jpg" width="300" height = "200"></td>
+            <td><img src="https://tacoselguero.mx/wp-content/uploads/2021/01/instalaciones_tacos_el_guero.jpg" width="300"></td>
+            <td><img src="https://tacoselguero.mx/wp-content/uploads/2021/01/Captura-de-Pantalla-2021-01-26-a-las-20.03.10.png" width="300" height = "200"></td>
+
+        </tr>
+      </table>
+
+
+</div>
+
+<div>
+
+<h1>Ubicacion</h1>
+
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=myMap"></script>
+
+
+</div>
+
+<div>
+    <h1>Contacto</h1>
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">Nombre</label>
+          <input type="text" id="fname" name="firstname" placeholder="Tu nombre..">
+      
+          <label for="lname">Apellido</label>
+          <input type="text" id="lname" name="lastname" placeholder="Tu apellido..">
+      
+          <label for="country">País</label>
+          <select id="country" name="country">
+            <option value="australia">Mexico</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Motivo</label>
+          <textarea id="subject" name="subject" placeholder="Escribe algo.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+
+</div>
+
+</body>
 </html>
